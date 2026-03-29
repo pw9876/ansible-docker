@@ -17,9 +17,12 @@ RUN apk add --no-cache \
     && update-ca-certificates \
     && pip3 install --no-cache-dir --break-system-packages \
        "ansible-core==${ANSIBLE_CORE_VERSION}" \
-    && ansible --version
+    && ansible --version \
+    && adduser -D ansible
 
 WORKDIR /workspace
+
+USER ansible
 
 ENTRYPOINT ["ansible"]
 CMD ["--version"]

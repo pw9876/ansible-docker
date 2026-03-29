@@ -51,3 +51,4 @@ fileExistenceTests:
 metadataTest:
   workdir: "/workspace"
   entrypoint: ["ansible"]
+  user: "ansible"
