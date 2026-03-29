@@ -6,12 +6,12 @@ FROM alpine:${ALPINE_VERSION}
 ARG ANSIBLE_CORE_VERSION
 
 RUN apk add --no-cache \
-    python3 \
-    py3-pip \
-    git \
-    openssh-client \
     bash \
     ca-certificates \
+    git \
+    openssh-client \
+    py3-pip \
+    python3 \
     rsync \
     sshpass \
     && update-ca-certificates \
