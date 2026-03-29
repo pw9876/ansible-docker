@@ -41,7 +41,7 @@ commandTests:
 
 fileExistenceTests:
   - name: "ansible binary present"
-    path: "/usr/local/bin/ansible"
+    path: "/usr/bin/ansible"
     shouldExist: true
 
   - name: "workspace directory exists"
